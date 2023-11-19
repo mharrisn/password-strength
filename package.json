@@ -29,8 +29,12 @@
     "build:ssr": "ng build --prod && ng run password-strength:server:production",
     "bundle-report": "webpack-bundle-analyzer dist/browser/stats-es2015.json",
     "serve:prerender": "cd dist/password-strength/browser && http-server",
-    "prerender": "ng run password-strength:prerender"
+    "prerender": "ng run password-strength:prerender",
+    "postinstall": "ng build @angular-material-extensions/password-strength"
   },
+  "files": [
+    "dist/angular-material-extensions/password-strength/*"
+  ],
   "dependencies": {
     "@angular-material-extensions/pages": "^4.0.0",
     "@angular/animations": "^17",
